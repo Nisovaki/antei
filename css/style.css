@@ -489,6 +489,31 @@ input:focus, textarea:focus {
   outline-color: #FFD600;
 }
 
+label.invalid {
+  color: #3C3C3C;
+  position: absolute;
+  left: 0px;
+  top: 44px;
+  background-color: #FFD600;
+  padding: 3px;
+  border-radius: 5px;
+  z-index: 1;
+  text-decoration: none;
+}
+
+label.invalid::before {
+  content: "";
+  border: 20px solid;
+  position: absolute;
+  top: -30px;
+  left: 4px;
+  border-color: #FFD600 transparent transparent;
+  border-left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: -1;
+}
+
 @font-face {
   font-family: "Noto Sans bold";
   src: url("../fonts/NotoSans-Bold.woff2") format("woff2"), url("../fonts/NotoSans-Bold.woff") format("woff");
@@ -1043,6 +1068,10 @@ ol li::before {
   margin-right: 2.1%;
 }
 
+.feedback-input {
+  position: relative;
+}
+
 .feedback__input {
   padding: 15px 14px 15px 14px;
   border: 2px solid #3C3C3C;
@@ -1050,7 +1079,7 @@ ol li::before {
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
-  width: 281px;
+  width: 588px;
   height: 53px;
   margin-right: 21px;
   margin-bottom: 20px;
@@ -1105,42 +1134,6 @@ ol li::before {
   color: #3C3C3C;
 }
 
-.feedback__file {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-}
-
-.feedback__file-button {
-  width: 588px;
-  height: 130px;
-  border: 2px solid #3C3C3C;
-  background: #ffffff;
-  color: #3C3C3C;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 130%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.feedback__file-button-text {
-  line-height: 1;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 33%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .feedback__img {
   margin-left: 5px;
 }
@@ -1151,8 +1144,17 @@ ol li::before {
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
-  margin-bottom: 23px;
+  margin-bottom: 35px;
   margin-top: 6px;
+}
+
+.feedback__personal {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  position: absolute;
+  bottom: 69px;
+  left: 51.8%;
 }
 
 .feedback-checkbox {
@@ -1194,6 +1196,10 @@ input:checked + .feedback-checkbox:before {
 input:disabled + .feedback-checkbox:before {
   background: #eee;
   color: #aaa;
+}
+
+.footer-size {
+  margin-top: 100px;
 }
 
 .footer-wrapper {
@@ -1520,5 +1526,82 @@ input:disabled + .feedback-checkbox:before {
 
 .scheme__button:focus {
   padding: 14px 28px 14px 29px;
+}
+
+.thankyou {
+  padding-top: 100px;
+  padding-bottom: 95px;
+  background: url(../img/thankyou/fon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center right;
+  position: relative;
+}
+
+.thankyou::before {
+  content: '';
+  width: 44.8%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.thankyou-block {
+  width: 45%;
+  height: 490px;
+  position: relative;
+  margin-right: 50px;
+  margin-left: 5%;
+}
+
+.thankyou-block__text {
+  width: 430px;
+  font-size: 18px;
+  line-height: 129%;
+  margin-bottom: 30px;
+}
+
+.thankyou-block__title {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 130%;
+  margin: 0;
+  margin-margin-top: 50px;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+}
+
+.thankyou__button {
+  margin-top: 15px;
+  padding: 16px 30px 17px 31px;
+  letter-spacing: 1.4px;
+}
+
+.thankyou__button:focus {
+  padding: 14px 28px 15px 29px;
+}
+
+.personal {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.personal__wrapper {
+  border: 3px solid #FFD600;
+  border-radius: 20px;
+  padding: 35px;
+  -webkit-box-shadow: 50px 50px 50px rgba(234, 242, 17, 0.04), -1em 0 3em rgba(234, 242, 17, 0.2);
+          box-shadow: 50px 50px 50px rgba(234, 242, 17, 0.04), -1em 0 3em rgba(234, 242, 17, 0.2);
+}
+
+.personal__title {
+  margin-top: 0;
+}
+
+.personal__button {
+  margin-top: 10px;
+  padding: 15px;
 }
 /*# sourceMappingURL=style.css.map */

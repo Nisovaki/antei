@@ -217,27 +217,27 @@
 		<div class="container">
 			<div class="feedback-block">
 				<div class="feedback-block__title">Обратная связь</div>
-				<form action="send.php" method="post" class="form feedback-form">
+				<form action="send.php" method="post" class="feedback-form">
 					<div class="feedback-input">
-						<input type="text" placeholder="Ваше имя*" class="feedback__input" name="name" required>
-					</div>
-					<div class="feedback-input">
-						<input type="text" class="feedback__input phone" placeholder="Телефон*" name="phone" required>
-					</div>
-					<div class="feedback-input">
-						<input type="text" placeholder="Электронная почта*" class="feedback__input" name="email" required>
+						<input type="text" placeholder="Ваше имя" class="feedback__input" name="name">
+						<input type="text" placeholder="Электронная почта" class="feedback__input" name="email">
 					</div>
 					<textarea name="message" placeholder="Ваше сообщение" class="feedback__message"></textarea>
 					<div class="feedback__wrapper">
+						<input type="file" name="file" type="file" id="input__file" multiple class="feedback__file">
+						<label for="input__file" class="feedback__file-button">
+							<span class="feedback__file-button-text">
+								<img class="feedback__img" src="img/feedback/file.svg" alt="файл">
+								Загрузить файлы 
+							</span>
+						</label>
 					</div>
 					<div class="feedback__agreemet">
-						<input type="checkbox" id="checkbox-id" name="checkbox" required>
+						<input type="checkbox" id="checkbox-id" required>
 						<label for="checkbox-id" class="feedback-checkbox"></label>
-						<span class="feedback__text">Даю согласие на обработку <a href="/personal.html" class="feedback__link">персональных данных</a></span>
-						<span class="feedback__personal">*Пожалуйста потвердите что вы согласны на обработку персональных данных</span>
-
+						<span class="feedback__text">Даю согласие на обработку <a href="#" class="feedback__link">персональных данных</a></span>
 					</div>
-					<button class="feedback__button interactivity" name="subscribeBtn">Отправить</button>
+					<button class="feedback__button interactivity">Отправить</button>
 				</form>
 			</div>
 		</div>
@@ -281,8 +281,6 @@
 	</footer>
 
 	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/jquery.mask.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

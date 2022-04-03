@@ -91,7 +91,27 @@ a
 input:focus, textarea:focus
 	outline-color: $btn-color
 			
-			
+label.invalid
+	color: $dark
+	position: absolute
+	left: 0px
+	top: 44px
+	background-color: $btn-color
+	padding: 3px
+	border-radius: 5px
+	z-index: 1
+	text-decoration: none
+	&::before
+		content: ""
+		border: 20px solid
+		position: absolute
+		top: -30px
+		left: 4px
+		border-color: $btn-color transparent transparent
+		border-left: 0
+		transform: rotate(180deg)
+		z-index: -1
+		
 		
 	
 

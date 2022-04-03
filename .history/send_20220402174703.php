@@ -5,9 +5,9 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 $name = $_POST['name'];
-$phone = $_POST['phone'];
 $message = $_POST['message'];
 $email = $_POST['email'];
+$file = $_FILES['myfile'];
 $subscribeBtn = $_POST['subscribeBtn'];
 
 // форма самого письма 
@@ -15,9 +15,9 @@ $title = "Новое обращение сайт Антей";
 $body = "
 <h2>Новое обращение</h2>
 <b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br>
 <b>email:</b> $email<br><br>
 <b>Сообщение:</b><br>$message
+<b>Файл:</b><br>$file
 ";
 
 // Настройки PHPMailer
@@ -30,15 +30,15 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
      // Настройки вашей почты
-    $mail->Host       = 'ssl://smtp.mail.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'adp48ru01@mail.ru'; // Логин на почте
-    $mail->Password   = 'wgZ9xyMHUTDrAs3ndz3f'; // Пароль на почте
+    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'Ksushcherbakova0602@yandex.ru'; // Логин на почте
+    $mail->Password   = 'oks160595+'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('adp48ru01@mail.ru','Антей Диспозиция Права'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('Ksushcherbakova0602@yandex.ru','Ксения Щербакова'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('adp48ru@mail.ru');  
+    $mail->addAddress('nikisovushka@yandex.ru');  
     
 
 
